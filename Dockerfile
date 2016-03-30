@@ -10,5 +10,5 @@ RUN adduser --disabled-password --gecos '' -u 22021 --gid 22021 druser
 # create /drunner and allow druser write access.
 RUN mkdir /drunner && chown druser:drgroup /drunner
 
-# lock it down to the non-root user.
-USER druser
+# derived containers need to switch to the non-root user:
+# USER druser
